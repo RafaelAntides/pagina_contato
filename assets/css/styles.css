@@ -1,0 +1,235 @@
+:root {
+    --primary-color: #0a1128;
+    --secondary-color: #FFFFFF;
+    --light-color: #bebebe;
+    --gap: 3rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+    color: var(--primary-color);
+    line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-size: 6rem;
+    text-transform: uppercase;
+}
+
+h2 {
+    font-size: 5.5rem;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    line-height: 1.2;
+}
+
+h3 {
+    font-size: 5rem;
+}
+
+h4 {
+    font-size: 4.5rem;
+}
+
+h5 {
+    font-size: 4rem;
+}
+
+h6 {
+    font-size: 3.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin-bottom: 3rem;
+}
+
+.main-bg {
+    background-image: url('../img/main-bg.svg');
+    background-size: cover;
+    background-position: center center;
+    color: var(--secondary-color);
+}
+
+.main-content {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 10rem var(--gap);
+}
+
+div.full-width {
+    width: 100%;
+    flex: 1 1 100%;
+}
+
+.home-content {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: var(--gap);
+    min-height: 100vh;
+}
+
+.home-text, .home-img {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+}
+
+.home-text a {
+    color: inherit;
+}
+
+.home-img img {
+    max-width: 100%;
+    height: auto;
+}
+
+.contato-form {
+    grid-column: span 2;
+}
+
+.contato-form .form-grid {
+    border: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--gap);
+}
+
+.form-grid legend {
+    font-style: italic;
+    font-size: 1.6rem;
+    padding-bottom: 3rem;
+}
+
+.form-group {
+    flex: 1 1 32;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.form-group input, .form-group textarea {
+    border: none;
+    background: var(--secondary-color);
+    padding: 1.5rem 2rem;
+    width: 100%;
+    font-size: 2rem;
+    outline: none;
+}
+
+.form-group ::placeholder {
+    color: var(--light-color);
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    box-shadow: 0 0 6px 2px var(--primary-color);
+}
+
+.form-group button {
+    border: 0.5rem solid var(--secondary-color);
+    background: none;
+    color: var(--secondary-color);
+    padding: 1.5rem 2rem;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.form-group button:hover {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.footer {
+    text-align: center;
+}
+
+.footer a {
+    font-size: 1.6rem;
+    color: inherit;
+}
+
+.footer p {
+    margin: 0;
+    padding: 2rem;
+}
+
+.footer img {
+    height: 1.6rem;
+    width: 1.6rem;
+}
+
+#resposta label {
+    font-weight: bold;
+}
+
+#resposta h2 {
+    max-width: 120rem;
+    font-size: 4.5rem;
+    margin: 0 auto;
+    padding: 10rem var(--gap) 4rem var(--gap);
+}
+
+.resposta-content {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 0 var(--gap);
+}
+
+.resposta-img {
+    border: none;
+    max-width: 50vh;
+    max-height: 50vh;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 40rem) {
+    .home-content, .grid {
+        grid-template-columns: 1fr;
+    }
+    .grid-one-content {
+        display: block;
+    }
+    h1 {
+        font-size: 4rem;
+    }
+    h2 {
+        font-size: 3rem;
+    }
+    h3 {
+        font-size: 3.2rem;
+    }
+    h4 {
+        font-size: 3.2rem;
+    }
+    h5 {
+        font-size: 3rem;
+    }
+    h6 {
+        font-size: 2.8rem;
+    }
+}
